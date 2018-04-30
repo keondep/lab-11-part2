@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body onload="draw()">
+<canvas id="sketch" width="600" height="600">
+</canvas>
+<script>
+	function draw() {
+	//your drawing goes here
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+	var x= 50
+	var num = prompt("Enter amount of circles you want")
+	for(var count = 1; count <= num ; count = count + 1){
+		
+		context.fillStyle="#add8e6";
+		context.beginPath();
+			context.arc(100, x, 40, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+		var x = x+100
+	}
+}
+</script>
+</body>
+</html>
